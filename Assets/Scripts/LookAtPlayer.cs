@@ -7,7 +7,14 @@ public class LookAtPlayer : MonoBehaviour
     //variable to hold the object you want to look at
     [SerializeField]
     private Transform _player;
+    [SerializeField]
+    public Transform startCamera;
 
+    private void Start()
+    {
+        transform.position = startCamera.position;
+        transform.rotation = startCamera.rotation;
+    }
 
     // Update is called once per frame
     void Update()
